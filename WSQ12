@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int mcd(int x, int y){
+if(x==y){
+return x;
+}
+else if(x>y){
+return mcd(x-y,y);
+}
+else{
+return mcd(x,y-x);
+}
+}
+int main(){
+int x, y;
+cout<<"Introduce el primer número"<<endl;
+cin>>x;
+cout<<"Introduce el otro número"<<endl;
+cin>>y;
+cout<<"El máximo(gran) común divisor de " << x << " y " << y <<" es "<< mcd(x,y)<<endl;
+return 0;
+}
+// a friend really helped me do this because I had no idea how to get ths done.
